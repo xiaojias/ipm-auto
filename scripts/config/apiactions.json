@@ -1,0 +1,71 @@
+[
+  {
+    "name": "returnAllGroups",
+    "description": "Return all the groups",
+    "action": "GET",
+    "href": "/1.0/topology/mgmt_artifacts?_filter=entityTypes:AgentGroup,AgentSystemGroup&_field=keyIndexName&_field=displayLabel&_field=description&_field=entityTypes&_field=_id&_field=_alarmServiceKey&_field=_observedAt",
+    "status": "available"
+  },
+  {
+    "name": "returnAllRelation",
+    "description": "Return all the relationship threshold & groups",
+    "action": "GET",
+    "href": "/1.0/thresholdmgmt/resource_assignments",
+    "status": "available"
+  },
+  {
+    "name": "returnThresholdBasedonLabel",
+    "description": "Return the threshold based on a specific label",
+    "action": "GET",
+    "href": "/1.0/thresholdmgmt/threshold_types/itm_private_situation/thresholds?_filter=label%3Dthresholdname",
+    "hrefp": "thresholdname",
+    "status": "available"
+  },
+  {
+    "name": "returnThresholdBasedonList",
+    "description": "Return all the thresholds based on a threshold list file",
+    "action": "GET",
+    "href": "/1.0/thresholdmgmt/threshold_types/itm_private_situation/thresholds?_filter=label%3Dthresholdname",
+    "hrefp": "thresholdname,listfile",
+    "status": "available"
+  },
+  {
+    "name": "returnAllThresholds",
+    "description": "Return all the thresholds",
+    "action": "GET",
+    "href": "/1.0/thresholdmgmt/threshold_types/itm_private_situation/thresholds",
+    "status": "available"
+  },
+  {
+    "name": "returnResourcesBaseonList",
+    "description": "get the Resource groups and Agents based on a listfile",
+    "action": "GET",
+    "href": "/1.0/topology/mgmt_artifacts/resourceID",
+    "hrefp": "resourceID,listfile",
+    "status": "available"
+  },
+  {
+    "name": "returnAllResources",
+    "description": "get all the Resource groups and Agents",
+    "action": "GET",
+    "href": "/1.0/topology/mgmt_artifacts/resourceID",
+    "hrefp": "resourceID",
+    "status": "testing"
+  },
+  {
+    "name": "returnAllAgents",
+    "description": "Return all agents",
+    "action": "GET",
+    "href": "/1.0/topology/mgmt_artifacts?_filter=entityTypes=Agent&_field=OSPlatformDescription&_field=description&_field=keyIndexName&_field=hostname&_field=monitoringDomain&_field=online&_field=version&_field=_href&_field=_id&_field=_executionTime&_field=_observedAt&_field=_transrenderTime",
+    "status": "available"
+  },
+  {
+    "name": "createResourcegroup",
+    "description": "Create new resource group based on name and desc",
+    "action": "POST",
+    "href": "/1.0/topology/mgmt_artifacts",
+    "hrefp": "rg_name,rg_desc",
+    "sample": "config/Create-rg.sample",
+    "status": "available"
+  }
+]
