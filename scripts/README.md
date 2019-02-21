@@ -1,4 +1,4 @@
-#APM8 Scripts
+# APM8 Scripts
 
 ## Goals
 The scripts will do:
@@ -20,7 +20,7 @@ sudo pip install --requirement requirement.txt
 Tested on Linux.
 
 ## Usage
-###1. Configure credentials in .json file
+### 1. Configure credentials in .json file
 Create config/credential.json file based on config/credential.json.sample;
 
 Valid value for "Type" is either "cloud" or "onprem"; for "Protocol" is either "http" or "https";
@@ -29,17 +29,17 @@ You can set "subsctiption" as any normal string which is easy to be remembered f
 
 You can add one or more indentical "subscription" with credentials into the .json file, but be sure the file applies standard json file format.
 
-####For APM8 SaaS subscription:
+#### For APM8 SaaS subscription:
 if you have the pairs of Client_ID & Client_Secret, 
 you can add the section likes "ipm8s1" subscription and fill all information into credential.json file;
 Otherwise, you can add the section likes "ipm8s2" subscription and fill all information into credential.json file;
 
-####For APM8 Onprem:
+#### For APM8 Onprem:
 If APM8 env supports "http", you can add the section likes "ipm8p1", and change others to reflect to your environment;
 If APM8 env supports "https", you can add the section likes "ipm8p2", and change others to reflect to your environment.
  
 
-###2. Extract the resources from APM8
+### 2. Extract the resources from APM8
 Run apm.py script to extract some or all resources ( supports Agents, ResourceGroups and Thresholds of now), and
 store the output into a directory. E.g
 
@@ -51,14 +51,14 @@ The output file is:/tmp/ipm8-1/allAgents.json
 ```
 You are able to do the same for "returnAllGroups", "returnAllThresholds" (and other in future).
 
-###3. Generate reports
+### 3. Generate reports
 Run createJson2Xls.py to create reports based on the output of #2. E.g
 ```
 $ ./createJson2Xls.py -d /tmp/ipm8-1
 File of /tmp/ipm8-1/Monitoring_IPM8-20190219.xls is created.
 
 ```
-###4. Create reports for other APM8 subscription or onprem, by repeating steps of 1-3
+### 4. Create reports for other APM8 subscription or onprem, by repeating steps of 1-3
 (with different subscription name, and different output directory)
 
 ## Constraints
