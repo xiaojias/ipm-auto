@@ -1,6 +1,12 @@
 #!/usr/bin/env python
 # -*- coding:utf8 -*- 
-"""Create .xls file from .json file/s.
+"""
+xiaojias@cn.ibm.com
+###################################################################
+# changes :                                                       #
+# 201xxxxx-XJS : Perform actions through API                      #
+###################################################################
+Create .xls file from .json file/s.
 
     Args:
         -d <directory>: will search the specific .json files from the directory and all of its sub directory. 
@@ -118,9 +124,9 @@ def main():
 
     t = {}
     t["templatename"] = "agent"
-    t["headerlist"] = ("keyIndexName", "description", "hostname", "online", "version", 
+    t["headerlist"] = ("keyIndexName", "description", "hostname", "online", "version", "productCode", 
                         "OSPlatformDescription",  "_id", "_observedAt",  "monitoringDomain")
-    t["colWidth"] = [2.3, 2, 3, 1, 2, 2, 3, 3, 2]
+    t["colWidth"] = [2.3, 2, 3, 1, 2, 2, 2, 3, 3, 2]
     t["colWidth"] = [int(i * col_unit) for i in t["colWidth"]]
     t["headers"] = {
         "keyIndexName": "Name",

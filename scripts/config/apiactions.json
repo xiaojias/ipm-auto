@@ -33,7 +33,7 @@
     "name": "returnAllThresholds",
     "description": "Return all the thresholds",
     "action": "GET",
-    "href": "/1.0/thresholdmgmt/threshold_types/itm_private_situation/thresholds",
+    "href": "/1.0/thresholdmgmt/threshold_types/itm_private_situation/thresholds?_offset=0&_limit=1000",
     "status": "available"
   },
   {
@@ -56,7 +56,7 @@
     "name": "returnAllAgents",
     "description": "Return all agents",
     "action": "GET",
-    "href": "/1.0/topology/mgmt_artifacts?_filter=entityTypes=Agent&_field=OSPlatformDescription&_field=description&_field=keyIndexName&_field=hostname&_field=monitoringDomain&_field=online&_field=version&_field=_href&_field=_id&_field=_executionTime&_field=_observedAt&_field=_transrenderTime",
+    "href": "/1.0/topology/mgmt_artifacts?_filter=entityTypes=Agent&_field=OSPlatformDescription&_field=description&_field=keyIndexName&_field=hostname&_field=monitoringDomain&_field=online&_field=version&_field=_href&_field=_id&_field=_executionTime&_field=_observedAt&_field=_transrenderTime&_field=productCode",
     "status": "available"
   },
   {
@@ -66,6 +66,6 @@
     "href": "/1.0/topology/mgmt_artifacts",
     "hrefp": "rg_name,rg_desc",
     "sample": "config/Create-rg.sample",
-    "status": "available"
+    "status": "testing"
   }
 ]
